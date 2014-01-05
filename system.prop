@@ -1,24 +1,7 @@
 #
 # system.prop for e400
 #
-
-rild.libpath=/system/lib/libril-qc-1.so
-rild.libargs=-d /dev/smd0
-rild.libpath.ganlite=/system/lib/librilswitch.so
-rilswitch.vendorlibpath=/system/lib/libhtc_ril.so
-ro.baseband.arch = msm
-ro.ril.update.acoustic.table = 1
-
-# Time between scans in seconds. Keep it high to minimize battery drain.
-# This only affects the case in which there are remembered access points,
-# but none are in range.
-wifi.supplicant_scan_interval=180
-wifi.interface=eth0
-wifi.softap.interface=eth0
-
-# density in DPI of the LCD of this board. This is used to scale the UI
-# appropriately. If this property is not defined, the default value is 160 dpi.
-ro.sf.lcd_density = 120
+ro.sf.lcd_density=120
 
 debug.fb.rgb565=0
 debug.sf.hw=1
@@ -30,6 +13,11 @@ ro.sf.compbypass.enable=0
 
 persist.sys.use_dithering=1
 
+wifi.interface=wlan0
+
+rild.libpath=/system/lib/libril-qc-1.so
+rild.libargs=-d /dev/smd0
+
 ro.telephony.ril.v3=signalstrength,datacall,singlepdp
 ro.telephony.ril_class=LGEQualcommUiccRIL
 ro.telephony.default_network=0
@@ -39,23 +27,3 @@ ro.additionalmounts=/mnt/extra-sd
 ro.vold.switchablepair=/mnt/sdcard,/mnt/extra-sd
 
 persist.sys.usb.config=mtp,adb
-
-#
-# ADDITIONAL_BUILD_PROPERTIES
-#
-dalvik.vm.heapstartsize=5m
-dalvik.vm.heapgrowthlimit=32m
-dalvik.vm.heapsize=76m
-keyguard.no_require_sim=true
-ro.com.android.dataroaming=true
-ro.com.android.dateformat=MM-dd-yyyy
-ro.config.ringtone=Ring_Synth_04.ogg
-ro.config.notification_sound=pixiedust.ogg
-ro.config.alarm_alert=Alarm_Classic.ogg
-ro.ril.hsxpa=1
-ro.ril.gprsclass=10
-ro.adb.qemud=1
-ro.kernel.android.checkjni=1
-dalvik.vm.dexopt-flags=m=y
-net.bt.name=Android
-dalvik.vm.stack-trace-file=/data/anr/traces.txt
