@@ -20,7 +20,7 @@ rild.libargs=-d /dev/smd0
 
 ro.telephony.ril.v3=signalstrength,datacall,singlepdp
 ro.telephony.ril_class=LGEQualcommUiccRIL
-ro.telephony.default_network=0
+ro.telephony.default_network=3
 telephony.lteOnGsmDevice=0
 
 ro.additionalmounts=/mnt/extra-sd
